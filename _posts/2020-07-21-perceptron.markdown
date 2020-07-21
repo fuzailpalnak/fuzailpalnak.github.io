@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Perceptron Algorithm"
+title:  "Understanding Perceptron Algorithm"
 comments: true
 description: "How does Perceptron learns the decision boundary needed to 
 classify the data?, What is the learning Rule for Peceptron?"
