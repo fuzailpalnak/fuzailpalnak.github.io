@@ -146,7 +146,7 @@ This translates to, the algorithm is trying to decrease the <code>theta</code> b
 <b>Rule when negative class is miss classified</b><br />
 
 <code>y = -1</code> then <code>w</code> is updated by $$w = w - x$$
-This translates to, the algorithm is trying to increase the <code>theta</code> between <code>w</code> and the <code>data point</code<br />
+This translates to, the algorithm is trying to increase the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
 
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
