@@ -64,7 +64,7 @@ The assumptions the Perceptron makes is that data is `linearly separable` and th
 
 <b>What Does linearly separable data mean</b><br />
 
-This means that there must exists a hyperplane which seperates the data points in way making all the points belonging
+This means that there must exists a hyperplane which separates the data points in way making all the points belonging
 positive class lie on one side of hyperplane and the data points belonging to negative class lie on the other side.
 
 </li>
@@ -75,8 +75,8 @@ positive class lie on one side of hyperplane and the data points belonging to ne
 <li>
 
 <b>Multiple Hyperplanes</b><br />
-Now we have assumed that the data is linearly seperable.<br />
-<code>How many hyperplanes could exists which seperates the data?
+Now we have assumed that the data is linearly separable.<br />
+<code>How many hyperplanes could exists which separates the data?
 Just One? More than One?</code><br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
 and perceptron finds one such hyperplane out of the many hyperplanes that exists
@@ -94,7 +94,7 @@ There are two core rules that forms the Algorithm
 <li>
 
 <b>Decision Rule</b><br />
-This rule checks wheather the data point lies on the positive side of the hyperplane or on the negative side, it does so
+This rule checks whether the data point lies on the positive side of the hyperplane or on the negative side, it does so
 by checking the <code>dot product</code> of the <code>weight</code> with the <code>data point</code>
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
 
@@ -105,7 +105,7 @@ $$w^T * x = 0$$
 <ul>
 <li>
 
-<b>How does the dot product tells wheather the data point lies on the positive side of the hyper plane or negative side of hyperplane?</b><br />
+<b>How does the dot product tells whether the data point lies on the positive side of the hyper plane or negative side of hyperplane?</b><br />
 
 Lets look at the other representation of dot product
 $$
@@ -133,7 +133,7 @@ will yield a negative prediction
 <b>Learning Rule</b><br />
 
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
-we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a seperating hyperplane<br />
+we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a separating hyperplane<br />
 The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
 $$w = w + y * x$$ 
 
