@@ -18,7 +18,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 - Defining Variables
-
 ```python
 class Perceptron:
     def __init__(self):
@@ -32,7 +31,7 @@ class Perceptron:
 
 - Get Positive and Negative Data Points, This block of code will load a Interactive GUI which will wait for user to 
 provide input, The bias term b is absolved by the data making the data one dimensional higher than the user provided input, making
-$w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coordinate \\y_coordinate \\1  \end{bmatrix}
+$w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coordinate \\y_coordinate \\1  \end{bmatrix}$
 ```python
 
     def populate_data(self):
@@ -74,24 +73,22 @@ $w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coo
         
 - Training the Perceptron classifier, it is combination of two rules `decision rule` and the `learning rule`
 
-    - *Decision Rule* $w^T * x$
-    
-```python
-    @staticmethod
-    def __decision_rule(w, x):
-        """
-        data points above the hyperplane will be positive as the theta will be [0, 90] with respect to self.w
-        and points below the hyperplane will be negative
-        
-        :param w:
-        :param x:
-        :return:
-        """
-        return np.dot(w, x)
-```
-    - *Learning Rule* 
-    $$w =\begin{cases}w & y * w^T * x > 0\\w = w + y * x & y * w^T * x <= 0\end{cases}$$
- 
+    - *Decision Rule :- * $w^T * x$ 
+    ```python
+        @staticmethod
+        def __decision_rule(w, x):
+            """
+            data points above the hyperplane will be positive as the theta will be [0, 90] with respect to self.w
+            and points below the hyperplane will be negative
+            
+            :param w:
+            :param x:
+            :return:
+            """
+            return np.dot(w, x)
+    ```
+
+    - *Learning Rule* $$w =\begin{cases}w & y * w^T * x > 0\\w = w + y * x & y * w^T * x <= 0\end{cases}$$  
 ```python
     @staticmethod
     def __update(w, x, y):
@@ -114,7 +111,6 @@ $w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coo
   
 - Train the classifier using the `Learning Rule` and `Decision Rule`, the classifier will loop until it finds the
 hyperplane
-
 ```python
     def train(self):
         step = 0
@@ -141,8 +137,8 @@ hyperplane
                 print("Perceptron Converged on Step : {}".format(step))
                 break
 ```
-- Run
 
+- Run
 ```python
 p = Perceptron()
 p.train()
