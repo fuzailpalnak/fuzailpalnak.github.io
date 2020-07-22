@@ -40,7 +40,7 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <ul>
 <li>
 
-**How to relate hyperplane?**<br />
+<b>How to relate hyperplane?</b><br />
 Consider the normal vector n <3, 1>, we can define the hyperplane as $$3x + 1y + c = 0$$,
 this is equivalent to having a line with slope `-3` and intercept `-c`, this forms $$y = (-3) x + (-c)$$
 
@@ -56,7 +56,7 @@ The assumptions the Perceptron makes is that data is `linearly separable` and th
 <ul>
 <li>
 
-**What Does linearly separable data mean**<br />
+<b>What Does linearly separable data mean</b><br />
 
 This means that there must exists a hyperplane which seperates the data points in way making all the points belonging
 positive class lie on one side of hyperplane and the data points belonging to negative class lie on the other side.
@@ -65,17 +65,17 @@ positive class lie on one side of hyperplane and the data points belonging to ne
 </li>
 <li>
 
-**Multiple Hyperplanes**<br />
+<b>Multiple Hyperplanes</b><br />
 Now we have assumed that the data is linearly seperable.<br />
 `How many hyperplanes could exists which seperates the data?
 Just One? More than One?`<br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
 and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
-![png]({{ site.url }}/assets/perceptron_files/multiple_hyperplanes.png)
 
 </li>
 </ul>
+![png]({{ site.url }}/assets/perceptron_files/multiple_hyperplanes.png)
 
 
 
@@ -85,7 +85,7 @@ There are two core rules that forms the Algorithm
 <ul>
 <li>
 
-**Decision Rule**<br />
+<b>Decision Rule</b><br />
 
 For Simplicity we eliminate the intercept term from $$w^T * x + b = 0$$ i.e remove the `b` from the equation, now the
 hyperplane will go through origin, so the equation will be 
@@ -99,7 +99,7 @@ $$w^T * x$$
 <ul>
 <li>
 
-**How does the dot product tells wheather the data point lies on the positive side of the hyper plane or negative side of hyperplane?**<br />
+<b>How does the dot product tells wheather the data point lies on the positive side of the hyper plane or negative side of hyperplane?</b><br />
 
 Lets look at the other representation of dot product
 $$
@@ -121,7 +121,7 @@ will yield a negative prediction
 
 <li>
 
-**Learning Rule**<br />
+<b>Learning Rule</b><br />
 
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
 we can keep on updating the weight vector `w` whenever we make a wrong prediction until we find a seperating hyperplane<br />
