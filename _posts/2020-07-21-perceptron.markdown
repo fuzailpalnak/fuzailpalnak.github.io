@@ -30,11 +30,14 @@ What are a, b? - they are the components of the vector, this vector has a specia
 so any hyperplane can be defined using its normal vector. 
 $$
 n^T * data + intercept = 0
-\\where;
+$$
+$$
+\text{where};
 \text{ n} = \begin{bmatrix}a  \\b \end{bmatrix} ;
 \text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} ;
 \text{intercept = distance from origin}
 $$
+
 One property of normal vector is, it is always perpendicular to hyperplane.
 
 <ul>
@@ -130,10 +133,10 @@ Now we know when the data point belong to negative class and when it belongs to 
 we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a seperating hyperplane<br />
 The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
 $$w = w + y * x$$ 
-When ever the algorithm miss classifies a positive point <code>w</code> is updated by $$w = w + x$$ as <code>y = 1</code>, this translates to, the algorithm is trying
+When ever the algorithm miss classifies a positive point <code>y = 1</code> then <code>w</code> is updated by $$w = w + x$$, this translates to, the algorithm is trying
 to decrease the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
 
-And When ever the algorithm miss classifies a negative point <code>w</code> is updated by $$w = w - x$$ as  as <code>y = -1</code>, this translates to, the algorithm is trying to
+And When ever the algorithm miss classifies a negative point <code>y = -1</code> then <code>w</code> is updated by $$w = w - x$$, this translates to, the algorithm is trying to
 increase the <code>theta</code> between <code>w</code> and the <code>data point</code> 
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
