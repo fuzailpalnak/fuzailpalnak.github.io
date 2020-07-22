@@ -30,7 +30,7 @@ What are a, b? - they are the components of the vector, this vector has a specia
 so any hyperplane can be defined using its normal vector. 
 <ul>
 $$
-n^T * data + intercept = 0
+n^T * coordinates + intercept = 0
 $$
 $$
 \text{where};
