@@ -29,7 +29,6 @@ this validates our definition of hyperplanes to be one dimension less than the a
 What are a, b? - they are the components of the vector, this vector has a special name called `normal vector`, 
 so any hyperplane can be defined using its normal vector. 
 <ul>
-<li>
 $$
 n^T * data + intercept = 0
 $$
@@ -39,7 +38,6 @@ $$
 \text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} ;
 \text{intercept = distance from origin}
 $$
-</li>
 </ul>
 
 
@@ -138,24 +136,18 @@ Now we know when the data point belong to negative class and when it belongs to 
 we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a seperating hyperplane<br />
 The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
 $$w = w + y * x$$ 
-<ul>
-<li>
 
 <b>Rule when positive class is miss classified</b><br />
 
 <code>y = 1</code> then <code>w</code> is updated by $$w = w + x$$
 This translates to, the algorithm is trying to decrease the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
-</li>
 
-<li>
 
 <b>Rule when negative class is miss classified</b><br />
 
 <code>y = -1</code> then <code>w</code> is updated by $$w = w - x$$
 This translates to, the algorithm is trying to increase the <code>theta</code> between <code>w</code> and the <code>data point</code<br />
-</li>
 
-</ul>
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
 
