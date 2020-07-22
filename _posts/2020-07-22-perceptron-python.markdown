@@ -31,8 +31,8 @@ class Perceptron:
 
 - Get Positive and Negative Data Points, This block of code will load a Interactive GUI which will wait for user to 
 provide input, The bias term b is absolved by the data making the data one dimensional higher than the user provided input, making
-$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}$ and 
-$\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$
+$$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}$$ 
+$$\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$$
 ```python
 
     def populate_data(self):
@@ -89,7 +89,7 @@ $\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$
             return np.dot(w, x)
     ```
 
-    - *Learning Rule* $$w =\begin{cases}w & y * w^T * x > 0\\w = w + y * x & y * w^T * x <= 0\end{cases}$$  
+    - *Learning Rule* $$\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
 ```python
     @staticmethod
     def __update(w, x, y):
