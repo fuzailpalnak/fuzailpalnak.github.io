@@ -1,4 +1,4 @@
-# My Learnings
+# ML Learning
 
 https://fuzailpalnak.github.io/
 
