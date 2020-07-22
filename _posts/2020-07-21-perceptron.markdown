@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Understanding The Perceptron Algorithm"
+title:  "Understanding The Perceptron Classifier"
 comments: true
 description: "How does Perceptron learns the decision boundary needed to 
 classify the data?, What is the learning Rule and Decision for Peceptron?"
@@ -9,11 +9,11 @@ permalink: /perceptron/
 author: Fuzail Palnak
 ---
 
-The Perceptron algorithm is the simplest type of artificial neural network. It is a model of a single neuron that can
+The Perceptron is the simplest type of artificial neural network. It is a model of a single neuron that can
 be used for two-class classification problems and provides the foundation for later developing much larger networks.
 
 
-*```Before we start with Perceptron, lets go through few concept that are essential in understanding the Algorithm```*
+*```Before we start with Perceptron, lets go through few concept that are essential in understanding the Classifier```*
 
 ### What are HyperPlanes
 	
@@ -23,7 +23,7 @@ its hyperplanes are the 1-dimensional lines.
 
 Consider a ***2D*** space, the `standard equation` of hyperplane in a ***2D*** space is defined
 as $ax + by + c = 0$, If the equation is simplified it results to  $y = (-a/b) x + (-c/b)$, which is noting but the
-`general equation` of line with slope `-a/b` and intercept `-c/b`, which is a ***1D*** hyperplane in a ***2D*** space,
+`general equation` of line with slope $-a/b$ and intercept $-c/b$, which is a ***1D*** hyperplane in a ***2D*** space,
 this validates our definition of hyperplanes to be one dimension less than the ambient space
 
 What are a, b? - they are the components of the vector, this vector has a special name called `normal vector`, 
@@ -36,8 +36,8 @@ $$
 \text{where};
 \text{ n} = \begin{bmatrix}a  \\b \end{bmatrix} ;
 \text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} ;
-\text{intercept = distance from origin}
 $$
+$$\text{intercept = distance from origin}$$
 </ul>
 
 
@@ -57,7 +57,7 @@ this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation 
 To have a deep dive in hyperplanes and how are hyperplanes formed and defined, have a look at 
 [this explanation](https://www.youtube.com/watch?v=-sNDkhE2Vsk&feature=emb_logo)
 
-### Assumptions made by the Algorithm
+### Assumptions made by the Classifier
 The assumptions the Perceptron makes is that data is `linearly separable` and the classification problem is `binary`
 <ul>
 <li>
@@ -87,9 +87,9 @@ and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
 
 
-### Perceptron Algorithm
+### Perceptron Classifier
 
-There are two core rules at the center of this Algorithm
+There are two core rules at the center of this Classifier
 <ul>
 <li>
 
@@ -135,18 +135,18 @@ $$
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
 we can keep on updating the weight vector $w$ whenever we make a wrong prediction until we find a separating hyperplane<br />
 if $y * w^T * x <= 0$ i.e the point has been misclassified hence we update the vector $w$ with the update rule
-$w = w + y * x$<br />
+$w = w + y * x$<br />   
 
 <b>Rule when positive class is miss classified</b><br />
 
 $$\text{if } y = 1 \text{ then } w = w + x$$
-This translates to, the algorithm is trying to decrease the $\Theta$ between $w$ and the $x$<br />
+This translates to, the classifier is trying to decrease the $\Theta$ between $w$ and the $x$<br />
 
 
 <b>Rule when negative class is miss classified</b><br />
 
 $$\text{if } y = -1 \text{ then } w = w - x$$
-This translates to, the algorithm is trying to increase the $\Theta$ between $w$ and the $x$<br />
+This translates to, the classifier is trying to increase the $\Theta$ between $w$ and the $x$<br />
 
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
@@ -155,7 +155,7 @@ This translates to, the algorithm is trying to increase the $\Theta$ between $w$
 </li>
 </ul>
 
-Combining the `Decision Rule` and `Learning Rule`, the perceptron algorithm is derived
+Combining the `Decision Rule` and `Learning Rule`, the perceptron classifier is derived
 ```python
 while True:
     miss_classified = 0
