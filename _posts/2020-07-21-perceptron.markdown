@@ -22,7 +22,7 @@ be used for two-class classification problems and provides the foundation for la
 its hyperplanes are the 1-dimensional lines.
 
 Consider a ***2D*** space, the `standard equation` of hyperplane in a ***2D*** space is defined
-as $$ax + by + c = 0$$, If the equation is simplified it results to  $$y = (-a/b) x + (-c/b)$$, which is noting but the
+as $ax + by + c = 0$, If the equation is simplified it results to  $y = (-a/b) x + (-c/b)$, which is noting but the
 `general equation` of line with slope `-a/b` and intercept `-c/b`, which is a ***1D*** hyperplane in a ***2D*** space,
 this validates our definition of hyperplanes to be one dimension less than the ambient space
 
@@ -47,8 +47,8 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <li>
 
 <b>How to relate hyperplane?</b><br />
-Consider the normal vector n <code><3, 1></code>, we can define the hyperplane as $$3x + 1y + c = 0$$
-this is equivalent to having a line with slope <code>-3</code> and intercept <code>-c</code>, this forms $$y = (-3) x + (-c)$$
+Consider the normal vector $n = \begin{bmatrix}3 \\1  \end{bmatrix}$ , we can define the hyperplane as $3x + 1y + c = 0$
+this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation is given by $y = (-3) x + (-c)$
 
 </li>
 </ul>
@@ -89,19 +89,17 @@ and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
 ### Perceptron Algorithm
 
-There are two core rules that forms the Algorithm 
+There are two core rules at the center of this Algorithm
 <ul>
 <li>
 
 <b>Decision Rule</b><br />
 This rule checks whether the data point lies on the positive side of the hyperplane or on the negative side, it does so
-by checking the <code>dot product</code> of the <code>weight</code> with the <code>data point</code>
+by checking the <code>dot product</code> of the $w$ with $x$ i.e the <code>data point</code>
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
 
-For Simplicity we eliminate the intercept term from $$w^T * x + b = 0$$ i.e remove the <code>b</code> from the equation, now the
-hyperplane will go through origin, so the equation will be 
-
-$$w^T * x = 0$$
+For simplicity we eliminate the intercept term from $w^T * x + b = 0$ i.e remove the $b$ from the equation, now the
+hyperplane will go through origin, so the equation will be $w^T * x = 0$
 <ul>
 <li>
 
@@ -117,10 +115,12 @@ $$
 $$
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
 
-For all the positive points theta is <code><90</code> which will result in a positive value as cos is positive and for all the
-negative points theta is <code>>90</code> which will result in a negative value as cos is negative<br />
-So if the value of $$w^T* x $$ is positive the algorithm will yield a positive prediction and  when its negative it
-will yield a negative prediction
+For all the positive points $\Theta$ is $< 90$ which will result in a positive value as cosine is positive and for all the
+negative points theta is $> 90$  which will result in a negative value as cosine is negative<br />
+Therefore the decision rule could be formulated as:-
+$$
+prediction =\begin{cases}1 & w^T* x >= 0\\-1 & w^T* x <  0\end{cases} 
+$$
 
 </li>
 </ul>
@@ -133,20 +133,20 @@ will yield a negative prediction
 <b>Learning Rule</b><br />
 
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
-we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a separating hyperplane<br />
-The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
-$$w = w + y * x$$ 
+we can keep on updating the weight vector $w$ whenever we make a wrong prediction until we find a separating hyperplane<br />
+if $y * w^T * x <= 0$ i.e the point has been misclassified hence we update the vector $w$ with the update rule
+$w = w + y * x$
 
 <b>Rule when positive class is miss classified</b><br />
 
-<code>y = 1</code> then <code>w</code> is updated by $$w = w + x$$
-This translates to, the algorithm is trying to decrease the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
+$$\text{if } y = 1 \text{ then } w = w + x$$
+This translates to, the algorithm is trying to decrease the $\Theta$ between $w$ and the $x$<br />
 
 
 <b>Rule when negative class is miss classified</b><br />
 
-<code>y = -1</code> then <code>w</code> is updated by $$w = w - x$$
-This translates to, the algorithm is trying to increase the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
+$$\text{if } y = -1 \text{ then } w = w - x$$
+This translates to, the algorithm is trying to increase the $\Theta$ between $w$ and the $x$<br />
 
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
