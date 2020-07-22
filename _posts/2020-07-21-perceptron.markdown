@@ -41,7 +41,7 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <li>
 
 <b>How to relate hyperplane?</b><br />
-Consider the normal vector n <3, 1>, we can define the hyperplane as $$3x + 1y + c = 0$$,
+Consider the normal vector n <3, 1>, we can define the hyperplane as $$3x + 1y + c = 0$$
 this is equivalent to having a line with slope `-3` and intercept `-c`, this forms $$y = (-3) x + (-c)$$
 
 </li>
@@ -61,8 +61,11 @@ The assumptions the Perceptron makes is that data is `linearly separable` and th
 This means that there must exists a hyperplane which seperates the data points in way making all the points belonging
 positive class lie on one side of hyperplane and the data points belonging to negative class lie on the other side.
 
-![png]({{ site.url }}/assets/perceptron_files/hyperplane.png)
 </li>
+</ul>
+![png]({{ site.url }}/assets/perceptron_files/hyperplane.png)
+
+<ul>
 <li>
 
 <b>Multiple Hyperplanes</b><br />
@@ -71,7 +74,6 @@ Now we have assumed that the data is linearly seperable.<br />
 Just One? More than One?`<br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
 and perceptron finds one such hyperplane out of the many hyperplanes that exists
-
 
 </li>
 </ul>
@@ -106,7 +108,7 @@ $$
 w^T* x = norm(vecw)norm(vecx)"cos"theta
 theta = "arcos" w^T* x/norm(vecw)norm(vecx)
 $$
-![png]({{ site.url }}/assets/perceptron_files/example2.png)
+<img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
 
 For all the positive points theta is `<90` which will result in a positive value as cos is positive and for all the
 negative points theta is `>90` which will result in a negative value as cos is negative<br />
