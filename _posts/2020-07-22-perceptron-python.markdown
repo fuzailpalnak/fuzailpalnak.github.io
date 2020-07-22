@@ -97,8 +97,6 @@ $\text{w } = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and \text{data } = \begi
         if point belong to +1 class then w = w + x
         The main objective here is to increase the cos(alpha) between the weight vector and the positive data points
         and decrease the cos(alpha) for negative points
-        https://towardsdatascience.com/perceptron-learning-algorithm-d5db0deab975
-        https://stackoverflow.com/questions/34477827/intuition-for-perceptron-weight-update-rule
 
         :param w:
         :param x:
