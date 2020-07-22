@@ -29,11 +29,11 @@ this validates our definition of hyperplanes to be one dimension less than the a
 What are a, b? - they are the components of the vector, this vector has a special name called `normal vector`, 
 so any hyperplane can be defined using its normal vector. 
 $$
-n^T* data + intercept = 0
-"where"
-"n =" ((a),(b))
-"data = " ((x),(y))
-"intercept = distance from origin"
+n^T * data + intercept = 0
+\text{where}
+\text{n} = \begin{bmatrix}a  \\b \end{bmatrix} 
+\text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} 
+\text{intercept = distance from origin}
 $$
 One property of normal vector is, it is always perpendicular to hyperplane.
 
@@ -41,8 +41,8 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <li>
 
 <b>How to relate hyperplane?</b><br />
-Consider the normal vector n <3, 1>, we can define the hyperplane as $$3x + 1y + c = 0$$
-this is equivalent to having a line with slope `-3` and intercept `-c`, this forms $$y = (-3) x + (-c)$$
+Consider the normal vector n <code><3, 1></code>, we can define the hyperplane as $$3x + 1y + c = 0$$
+this is equivalent to having a line with slope <code>-3</code> and intercept <code>-c</code>, this forms $$y = (-3) x + (-c)$$
 
 </li>
 </ul>
@@ -70,8 +70,8 @@ positive class lie on one side of hyperplane and the data points belonging to ne
 
 <b>Multiple Hyperplanes</b><br />
 Now we have assumed that the data is linearly seperable.<br />
-`How many hyperplanes could exists which seperates the data?
-Just One? More than One?`<br />
+<code>How many hyperplanes could exists which seperates the data?
+Just One? More than One?</code><br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
 and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
@@ -88,16 +88,14 @@ There are two core rules that forms the Algorithm
 <li>
 
 <b>Decision Rule</b><br />
+This rule checks wheather the data point lies on the positive side of the hyperplane or on the negative side, it does so
+by checking the <code>dot product</code> of the <code>weight</code> with the <code>data point</code>
+<img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
 
-For Simplicity we eliminate the intercept term from $$w^T * x + b = 0$$ i.e remove the `b` from the equation, now the
+For Simplicity we eliminate the intercept term from $$w^T * x + b = 0$$ i.e remove the <code>b</code> from the equation, now the
 hyperplane will go through origin, so the equation will be 
 
 $$w^T * x = 0$$
-
-This rule checks wheather the data point lies on the positive side of the hyperplane or on the negative side, it does so
-by checking the `dot product` of the `weight` with the `data point`
-
-$$w^T * x$$
 <ul>
 <li>
 
@@ -105,8 +103,8 @@ $$w^T * x$$
 
 Lets look at the other representation of dot product
 $$
-w^T* x = norm(vecw)norm(vecx)"cos"theta
-theta = "arcos" w^T* x/norm(vecw)norm(vecx)
+w^T* x = \| w \|  \| x \| cos \theta 
+ \Theta  =  arcos   \frac{w^{T} * x }{\| w \|  \| x \|} 
 $$
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
 
@@ -127,10 +125,14 @@ will yield a negative prediction
 
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
 we can keep on updating the weight vector `w` whenever we make a wrong prediction until we find a seperating hyperplane<br />
-The rule says $$yi*w^T* x <= 0$$ we update the vector `w`  $$vecw = vecw + y * vecx$$
-When ever the algorithm miss classifies a positive point we add `x` to `w`, this translates to, the algorithm is trying
-to decrease the `theta` between `w` and the `data point` when positive point is miss classified and will 
-increase the `theta` between `w` and the `data point` when negative point is miss classified 
+The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
+$$w = w + y * x$$ When ever the algorithm miss classifies a positive point we add <code>x</code> to <code>w</code> as <code>y = 1</code>, this translates to, the algorithm is trying
+to decrease the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
+
+And when ever a negative point is miss classified we subtract <code>x</code> from <code>w</code> as <code>y = -1</code>, this translates to, the algorithm is trying to
+increase the <code>theta</code> between <code>w</code> and the <code>data point</code> when negative point is miss classified 
+
+<img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
 
  
 </li>
