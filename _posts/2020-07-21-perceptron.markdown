@@ -30,9 +30,9 @@ What are a, b? - they are the components of the vector, this vector has a specia
 so any hyperplane can be defined using its normal vector. 
 $$
 n^T * data + intercept = 0
-\text{where}
-\text{n} = \begin{bmatrix}a  \\b \end{bmatrix} 
-\text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} 
+\\where;
+\text{ n} = \begin{bmatrix}a  \\b \end{bmatrix} ;
+\text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} ;
 \text{intercept = distance from origin}
 $$
 One property of normal vector is, it is always perpendicular to hyperplane.
@@ -104,12 +104,15 @@ $$w^T * x = 0$$
 Lets look at the other representation of dot product
 $$
 w^T* x = \| w \|  \| x \| cos \theta 
- \Theta  =  arcos   \frac{w^{T} * x }{\| w \|  \| x \|} 
+$$
+
+$$
+\Theta  =  arcos   \frac{w^{T} * x }{\| w \|  \| x \|} 
 $$
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
 
-For all the positive points theta is `<90` which will result in a positive value as cos is positive and for all the
-negative points theta is `>90` which will result in a negative value as cos is negative<br />
+For all the positive points theta is <code><90</code> which will result in a positive value as cos is positive and for all the
+negative points theta is <code>>90</code> which will result in a negative value as cos is negative<br />
 So if the value of $$w^T* x $$ is positive the algorithm will yield a positive prediction and  when its negative it
 will yield a negative prediction
 
@@ -124,13 +127,14 @@ will yield a negative prediction
 <b>Learning Rule</b><br />
 
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
-we can keep on updating the weight vector `w` whenever we make a wrong prediction until we find a seperating hyperplane<br />
+we can keep on updating the weight vector <code>w</code> whenever we make a wrong prediction until we find a seperating hyperplane<br />
 The rule says $$yi*w^T* x <= 0$$ i.e the point has been misclassified hence we update the vector <code>w</code> with the update rule
-$$w = w + y * x$$ When ever the algorithm miss classifies a positive point we add <code>x</code> to <code>w</code> as <code>y = 1</code>, this translates to, the algorithm is trying
+$$w = w + y * x$$ 
+When ever the algorithm miss classifies a positive point <code>w</code> is updated by $$w = w + x$$ as <code>y = 1</code>, this translates to, the algorithm is trying
 to decrease the <code>theta</code> between <code>w</code> and the <code>data point</code><br />
 
-And when ever a negative point is miss classified we subtract <code>x</code> from <code>w</code> as <code>y = -1</code>, this translates to, the algorithm is trying to
-increase the <code>theta</code> between <code>w</code> and the <code>data point</code> when negative point is miss classified 
+And When ever the algorithm miss classifies a negative point <code>w</code> is updated by $$w = w - x$$ as  as <code>y = -1</code>, this translates to, the algorithm is trying to
+increase the <code>theta</code> between <code>w</code> and the <code>data point</code> 
 
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
 
