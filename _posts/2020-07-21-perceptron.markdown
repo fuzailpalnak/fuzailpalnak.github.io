@@ -34,8 +34,8 @@ n^T * data + intercept = 0
 $$
 $$
 \text{where};
-\text{ n} = \begin{bmatrix}a  \\b \end{bmatrix} ;
-\text{data} =  \begin{bmatrix}x  \\y \end{bmatrix} ;
+\vec{n}  = \begin{bmatrix}a  \\b \end{bmatrix} ;
+\vec{coordinates}  =  \begin{bmatrix}x  \\y \end{bmatrix} ;
 $$
 $$\text{intercept = distance from origin}$$
 </ul>
@@ -47,7 +47,7 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <li>
 
 <b>How to relate hyperplane?</b><br />
-Consider the normal vector $n = \begin{bmatrix}3 \\1  \end{bmatrix}$ , we can define the hyperplane as $3x + 1y + c = 0$
+Consider the normal vector $\vec{n}  = \begin{bmatrix}3 \\1  \end{bmatrix}$ , we can define the hyperplane as $3x + 1y + c = 0$
 this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation is given by $y = (-3) x + (-c)$
 
 </li>
@@ -95,7 +95,7 @@ There are two core rules at the center of this Classifier
 
 <b>Decision Rule</b><br />
 This rule checks whether the data point lies on the positive side of the hyperplane or on the negative side, it does so
-by checking the <code>dot product</code> of the $w$ with $x$ i.e the <code>data point</code>
+by checking the <code>dot product</code> of the $\vec{w}$ with $\vec{x}$ i.e the <code>data point</code>
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
 
 For simplicity we eliminate the intercept term from $w^T * x + b = 0$ i.e remove the $b$ from the equation, now the
@@ -135,17 +135,17 @@ $$
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
 we can keep on updating the weight vector $w$ whenever we make a wrong prediction until we find a separating hyperplane<br />
 if $y * w^T * x <= 0$ i.e the point has been misclassified hence we update the vector $w$ with the update rule
-$w = w + y * x$<br />   
+$\vec{w}  = \vec{w}  + y * \vec{x}$<br />   
 
 <b>Rule when positive class is miss classified</b><br />
 
-$$\text{if } y = 1 \text{ then } w = w + x$$
+$$\text{if } y = 1 \text{ then } \vec{w}  = \vec{w} + \vec{x}$$
 This translates to, the classifier is trying to decrease the $\Theta$ between $w$ and the $x$<br />
 
 
 <b>Rule when negative class is miss classified</b><br />
 
-$$\text{if } y = -1 \text{ then } w = w - x$$
+$$\text{if } y = -1 \text{ then } \vec{w}  = \vec{w} - \vec{x}$$
 This translates to, the classifier is trying to increase the $\Theta$ between $w$ and the $x$<br />
 
 
