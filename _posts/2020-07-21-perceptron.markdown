@@ -135,7 +135,7 @@ $$
 Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
 we can keep on updating the weight vector $w$ whenever we make a wrong prediction until we find a separating hyperplane<br />
 if $y * w^T * x <= 0$ i.e the point has been misclassified hence we update the vector $w$ with the update rule
-$w = w + y * x$
+$w = w + y * x$<br />
 
 <b>Rule when positive class is miss classified</b><br />
 
