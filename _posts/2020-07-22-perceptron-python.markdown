@@ -31,7 +31,7 @@ class Perceptron:
 
 - Get Positive and Negative Data Points, This block of code will load a Interactive GUI which will wait for user to 
 provide input, The bias term b is absolved by the data making the data one dimensional higher than the user provided input, making
-$w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coordinate \\y_coordinate \\1  \end{bmatrix}$
+$\text{w } = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and \text{data } = \begin{bmatrix}x_coordinate \\y_coordinate \\1  \end{bmatrix}$
 ```python
 
     def populate_data(self):
@@ -73,7 +73,7 @@ $w = \begin{bmatrix}w1 \\w2 \\b  \end{bmatrix}$ and $data = \begin{bmatrix}x_coo
         
 - Training the Perceptron classifier, it is combination of two rules `decision rule` and the `learning rule`
 
-    - *Decision Rule :- * $w^T * x$ 
+    - *Decision Rule :-* $w^T * x$ 
     ```python
         @staticmethod
         def __decision_rule(w, x):
