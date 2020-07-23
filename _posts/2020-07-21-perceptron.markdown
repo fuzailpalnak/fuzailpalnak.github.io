@@ -47,7 +47,7 @@ One property of normal vector is, it is always perpendicular to hyperplane.
 <li>
 
 <b>How to relate hyperplane?</b><br />
-Consider the normal vector $\vec{n}  = \begin{bmatrix}3 \\1  \end{bmatrix}$ , we can define the hyperplane as $3x + 1y + c = 0$
+Consider the normal vector $\vec{n}  = \begin{bmatrix}3 \\1  \end{bmatrix}$ , now the hyperplane can be define as $3x + 1y + c = 0$
 this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation is given by $y = (-3) x + (-c)$
 
 </li>
@@ -75,7 +75,7 @@ positive class lie on one side of hyperplane and the data points belonging to ne
 <li>
 
 <b>Multiple Hyperplanes</b><br />
-Now we have assumed that the data is linearly separable.<br />
+Now the assumptions is that the data is linearly separable.<br />
 <code>How many hyperplanes could exists which separates the data?
 Just One? More than One?</code><br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
@@ -98,8 +98,10 @@ This rule checks whether the data point lies on the positive side of the hyperpl
 by checking the <code>dot product</code> of the $\vec{w}$ with $\vec{x}$ i.e the <code>data point</code>
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
 
-For simplicity we eliminate the intercept term from $w^T * x + b = 0$ i.e remove the $b$ from the equation, now the
-hyperplane will go through origin, so the equation will be $w^T * x = 0$
+For simplicity the <code>bias/intercept</code> term is removed from the equation $w^T * x + b = 0$, without the <code>bias/intercept</code> term,
+the hyperplane, that $w$ defines would always have to go through the origin, i.e. $w^T * x = 0$<br />
+This is done so the focus is just on the working of the classifier and not have to worry about the bias term during computation
+
 <ul>
 <li>
 
@@ -111,15 +113,19 @@ w^T* x = \| w \|  \| x \| cos \theta
 $$
 
 $$
-\Theta  =  arcos   \frac{w^{T} * x }{\| w \|  \| x \|} 
+\Theta  \propto   \text{arcos }  w^{T} * x
 $$
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
 
-For all the positive points $\Theta$ is $< 90$ which will result in a positive value as cosine is positive and for all the
-negative points theta is $> 90$  which will result in a negative value as cosine is negative<br />
+For all the positive points, $cos \theta$ is positive as $\Theta$ is $< 90$, and for all the negative points,
+$cos \theta$ is negative as $\Theta$ is $> 90$
+Above could be summarized as 
+$$\text{if } w^T* x  \geq  0 \text{ then }  \Theta < 90$$
+$$\text{elif } w^T* x  <  0 \text{ then }  \Theta > 90$$
+
 Therefore the decision rule could be formulated as:-
 $$
-prediction =\begin{cases}1 & w^T* x >= 0\\-1 & w^T* x <  0\end{cases} 
+prediction =\begin{cases}1 & w^T* x \geq 0\\-1 & w^T* x <  0\end{cases} 
 $$
 
 </li>
@@ -132,9 +138,9 @@ $$
 
 <b>Learning Rule</b><br />
 
-Now we know when the data point belong to negative class and when it belongs to positive class, using this information 
-we can keep on updating the weight vector $w$ whenever we make a wrong prediction until we find a separating hyperplane<br />
-if $y * w^T * x <= 0$ i.e the point has been misclassified hence we update the vector $w$ with the update rule
+Now there is a rule which informs the classifier about the class the data point belongs to, using this information 
+classifier can keep on updating the weight vector $w$ whenever it make a wrong prediction until a separating hyperplane is found<br />
+if $y * w^T * x <= 0$ i.e the point has been misclassified hence classifier will update the vector $w$ with the update rule
 $\vec{w}  = \vec{w}  + y * \vec{x}$<br />   
 
 <b>Rule when positive class is miss classified</b><br />
@@ -152,6 +158,17 @@ This translates to, the classifier is trying to increase the $\Theta$ between $w
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
 
  
+</li>
+<li>
+
+Lets deal with the <code>bias/intercept</code> which was eliminated earlier, there is a simple trick which accounts the bias
+term while keeping the same computation discussed above, the trick is to absorb the bias term in weight vector $\vec{w}$,
+and adding a constant term to the data point $\vec{x}$
+$$\vec{w_{adjusted}}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}$$ 
+$$\vec{x_{adjusted}}  = \begin{bmatrix}x_{1} \\x_{2} \\1  \end{bmatrix}$$
+
+$$w_{adjusted}^T * x_{adjusted} = 0\\w_{1}  x_{1} + w_{2}  x_{2} +b = 0\\ \text{which is }  w^{T} * x + b =0\\ \text{Therefore }w_{adjusted}^{T} * x_{adjusted} = w^{T} * x + b$$
+
 </li>
 </ul>
 
