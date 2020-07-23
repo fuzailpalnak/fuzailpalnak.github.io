@@ -30,14 +30,9 @@ What are a, b? - they are the components of the vector, this vector has a specia
 so any hyperplane can be defined using its normal vector. 
 <ul>
 $$
-n^T * coordinates + intercept = 0
+n^T * coordinates + intercept = 0 
+\\\text{where; }\\\vec{n}  = \begin{bmatrix}a  \\b \end{bmatrix}\\\vec{coordinates}  =  \begin{bmatrix}x  \\y \end{bmatrix}\\\text{intercept = distance from origin}
 $$
-$$
-\text{where};
-\vec{n}  = \begin{bmatrix}a  \\b \end{bmatrix} ;
-\vec{coordinates}  =  \begin{bmatrix}x  \\y \end{bmatrix} ;
-$$
-$$\text{intercept = distance from origin}$$
 </ul>
 
 
