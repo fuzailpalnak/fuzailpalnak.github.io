@@ -119,7 +119,7 @@ $$
 
 For all the positive points, $cos \theta$ is positive as $\Theta$ is $< 90$, and for all the negative points,
 $cos \theta$ is negative as $\Theta$ is $> 90$
-Above could be summarized as 
+This could be summarized as 
 $$\text{if } w^T* x  \geq  0 \text{ then }  \Theta < 90$$
 $$\text{elif } w^T* x  <  0 \text{ then }  \Theta > 90$$
 
@@ -160,6 +160,8 @@ This translates to, the classifier is trying to increase the $\Theta$ between $w
  
 </li>
 <li>
+
+<b>Dealing with the bias Term</b><br />
 
 Lets deal with the <code>bias/intercept</code> which was eliminated earlier, there is a simple trick which accounts the bias
 term while keeping the same computation discussed above, the trick is to absorb the bias term in weight vector $\vec{w}$,
