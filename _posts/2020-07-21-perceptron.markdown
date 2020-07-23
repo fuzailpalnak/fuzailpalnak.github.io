@@ -168,7 +168,7 @@ term while keeping the same computation discussed above, the trick is to absorb 
 and adding a constant term to the data point $\vec{x}$
 $$\vec{w_{adjusted}}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix} \vec{x_{adjusted}}  = \begin{bmatrix}x_{1} \\x_{2} \\1  \end{bmatrix}$$
 
-$$w_{adjusted}^T * x_{adjusted} = 0\\w_{1}  x_{1} + w_{2}  x_{2} +b = 0\\ \text{which be written as }  w^{T} * x + b =0\\ \text{Therefore }w_{adjusted}^{T} * x_{adjusted} = w^{T} * x + b$$
+$$w_{adjusted}^T * x_{adjusted} = 0\\w_{1}  x_{1} + w_{2}  x_{2} +b = 0\\ \text{which is nothing but }  \\w^{T} * x + b =0\\ \text{therefore } \\w_{adjusted}^{T} * x_{adjusted} = w^{T} * x + b$$
 
 </li>
 </ul>
