@@ -145,6 +145,8 @@ p.plt_decision_boundary()
 ```
 ![png]({{ site.url }}/assets/perceptron_python/decision.png)
 
+Visit the code on [Github]("https://github.com/fuzailpalnak/ML-Scratch/blob/master/perceptron/perceptron.py)
+
 
 
 
