@@ -24,7 +24,7 @@ the volume of feature space grows so quickly that the data cannot keep up and th
 
 
 
-| ![Data In One Dimension](https://fuzailpalnak.github.io//assets/curse/scale_first.png)  | ![Data in Two Dimension with ambient space](https://fuzailpalnak.github.io//assets/curse/scale_second.png) |
+| ![Data In One Dimension](https://fuzailpalnak.github.io/assets/curse/scale_first.png)  | ![Data in Two Dimension with ambient space](https://fuzailpalnak.github.io/assets/curse/scale_second.png) |
 |:---:|:---:|
 | Data In One Dimension | Data in Two Dimension with ambient space |
 
@@ -38,9 +38,9 @@ Intrinsic dimension for a data set can be thought of as the number of features n
 The true dimensionality of the data can be much lower than its ambient space, i.e the space could be high dimensional
 $\Re^n$ but the data might lie in a *sub space* $\Re^d$, Imagine a 2D $\Re^2$ plane embedded in $n$ dimension space $\Re^n$, here the data is $2D$, 
 the rest is just ambient space, here the data has $2D$ intrinsic dimensionality. 
-![png]({{ site.url }}/assets/curse/subspace.png)<br/ >
+![png](https://fuzailpalnak.github.io/assets/curse/subspace.png)
 Other case could be the data lies in a *sub dimensional manifold* that is embedded within $\Re^n$
-![png]({{ site.url }}/assets/curse/manifold.png)
+![png](https://fuzailpalnak.github.io/assets/curse/manifold.png)
 
 
 
