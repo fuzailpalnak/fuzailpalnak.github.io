@@ -24,7 +24,7 @@ the volume of feature space grows so quickly that the data cannot keep up and th
 
 
 
-| ![Data In One Dimension](https://fuzailpalnak.github.io//assets/curse/scale_first.png)  | ![AudioBlocks](https://fuzailpalnak.github.io//assets/curse/scale_second.png) |
+| ![Data In One Dimension](https://fuzailpalnak.github.io//assets/curse/scale_first.png)  | ![Data in Two Dimension with ambient space](https://fuzailpalnak.github.io//assets/curse/scale_second.png) |
 |:---:|:---:|
 | Data In One Dimension | Data in Two Dimension with ambient space |
 
