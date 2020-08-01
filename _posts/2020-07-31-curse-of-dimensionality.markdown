@@ -70,7 +70,7 @@ The true dimensionality of the data can be much lower than its ambient space.
 
 <b>Sub Spaces</b><br />
 
-The space could be high dimensional but the data might lie in a *sub space*, a $\Re^d$ dimensional data embedded in $\Re^n$  dimensional space 
+The space could be high dimensional but the data might lie in a <b>sub space</b>, a $\Re^d$ dimensional data embedded in $\Re^n$  dimensional space 
 <div style="padding: 10px;">
 <figure class="image">
   <img src="https://fuzailpalnak.github.io/assets/curse/subspace.png" alt="Sub Space">
@@ -85,7 +85,7 @@ The space could be high dimensional but the data might lie in a *sub space*, a $
 
 <b>Manifolds</b><br />
 
-Data lies in a *sub dimensional manifold* that is embedded within $\Re^n$
+Data lies in a <b>sub dimensional manifold</b> that is embedded within $\Re^n$
 
 <div style="padding: 10px;">
 <figure class="image">
