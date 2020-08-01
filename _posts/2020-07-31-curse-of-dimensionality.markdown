@@ -52,7 +52,7 @@ machine learning algorithm to perform well, if data points are not in proportion
 <li>
 
 <b>Euclidean Distance in High Dimensional Space</b><br />
-The distance between data points in $n$ dimensional space is given as $$\sqrt{ \triangle x^2 +  \triangle y^2 +  \cdots + \triangle n^2} $$, The addition of new feature
+The distance between data points in $n$ dimensional space is given as $$\sqrt{ \triangle x^2 +  \triangle y^2 +  \cdots + \triangle n^2} $$The addition of new feature
  will always add a positive value to the overall distance, the distance between two data points increases drastically with their dimensionality.
 i.e the data points move further apart as a new feature is added, So in high dimensional space euclidean distance is not an accurate distance metric to consider.
 
