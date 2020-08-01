@@ -10,9 +10,9 @@ author: Fuzail Palnak
 
 ### What is Dimensionality in Data?
 Dimensionality in statistics refers to how many attributes/features a data point has. For example, real state data, where 
-each house is a data point which can be represented with attributes/features. The word **feature** and **dimension** will be used interchangebly
+each house is a data point which can be represented with attributes/features.
 $$house =  \begin{bmatrix}\text{num of bedrooms} \\\text{num of rooms} \\\text{has a garage} \\\text{...}  \end{bmatrix}$$
-
+ The word **feature** and **dimension** will be used interchangeably
 
 ### What happens when dimensionality in data is increased?
 > "As the number of features or dimensions grows, the amount of data we need to generalize accurately grows exponentially." <br /> - Charles Isbell, Professor and Senior Associate Dean, School of Interactive Computing, Georgia Tech
