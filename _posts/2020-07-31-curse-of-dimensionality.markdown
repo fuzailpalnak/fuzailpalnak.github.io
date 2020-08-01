@@ -42,7 +42,8 @@ any new data points the feature space grows to $5^2$, and as no new data point i
 </div>
 
 If the addition of features is continued without any new data point the feature space increases exponentially and eventually become sparse. In other words
-the volume of feature space grows so quickly that the data cannot keep up and the feature space is just left empty<br/ >
+the volume of feature space grows so quickly that the data cannot keep up and the feature space is just left empty<br />
+
 In Machine Learning, we want the data to be spread in every part of the region not just in a limited region, for our
 machine learning algorithm to perform well, if data points are not in proportion with the features then the model might experience poor performance during testing.
 
