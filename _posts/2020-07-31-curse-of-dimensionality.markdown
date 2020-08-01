@@ -101,8 +101,6 @@ There are several algorithm which finds sub dimensional manifold and subspaces, 
 space into a low-dimensional space so that the low-dimensional representation retains some meaningful properties of the
 original data, ideally close to its intrinsic dimension. This process is referred as Dimensionality reduction
 
-### Distance between Data points in High Dimensional Space
-
 
 
  
