@@ -9,9 +9,11 @@ author: Fuzail Palnak
 ---
 
 ### What is Dimensionality in Data?
-Dimensionality in statistics refers to how many attributes/features a data point has. For example, real state data, where 
-each house is a data point which can be represented with attributes/features.
-$$ house =  \begin{bmatrix}\text{num of bedrooms} \\\text{num of rooms} \\\text{has a garage} \\\text{...}  \end{bmatrix} $$
+Dimensionality in statistics refers to how many <code>attributes/features</code> a data point has. For example, real state data, where 
+each house is a data point which can be represented with <code>attributes/features</code>.
+$$ 
+house =  \begin{bmatrix}\text{num of bedrooms} \\\text{num of rooms} \\\text{has a garage} \\\text{...}  \end{bmatrix} 
+$$
 
 
 ### What happens when dimensionality in data is increased?
@@ -44,15 +46,15 @@ any new data points the feature space grows to $5^2$, and as no new data point i
 If the addition of features is continued without any new data point the feature space increases exponentially and eventually become sparse. In other words
 the volume of feature space grows so quickly that the data cannot keep up and the feature space is just left empty<br />
 
-In Machine Learning, we want the data to be spread in every part of the region not just in a limited region, for our
-machine learning algorithm to perform well, if data points are not in proportion with the features then the model might experience poor performance during testing.
+<mark>In Machine Learning, we want the data to be spread in every part of the region not just in a limited region, for our
+machine learning algorithm to perform well, if data points are not in proportion with the features then the model might experience poor performance during testing</mark>
 
 </li>
 
 <li>
 
 <b>Euclidean Distance in High Dimensional Space</b><br />
-The distance between data points in $n$ dimensional space is given as $$\sqrt{ \triangle x^2 +  \triangle y^2 +  \cdots + \triangle n^2} $$The addition of new feature
+The distance between data points in $n$ dimensional space is given as $$\text{distance = }\sqrt{ \triangle x^2 +  \triangle y^2 +  \cdots + \triangle n^2} $$The addition of new feature
  will always add a positive value to the overall distance, the distance between two data points increases drastically with their dimensionality.
 i.e the data points move further apart as a new feature is added, So in high dimensional space euclidean distance is not an accurate distance metric to consider.
 
@@ -62,9 +64,9 @@ i.e the data points move further apart as a new feature is added, So in high dim
 
 ### Data with low dimensional structure
 
-However, not always such a huge feature space is required to represent the underlying data, this representation is known as intrinsic dimensionality of data. 
+However, not always such a huge feature space is required to represent the underlying data, true dimensionality of the data can be much lower than its ambient space.
+this representation is known as <code>intrinsic dimensionality</code> of data. 
 Intrinsic dimension for a data set can be thought of as the number of features needed in a minimal representation of the data. 
-The true dimensionality of the data can be much lower than its ambient space.
 <ul>
 <li>
 
@@ -85,7 +87,8 @@ The space could be high dimensional but the data might lie in a <b>sub space</b>
 
 <b>Manifolds</b><br />
 
-Data lies in a <b>sub dimensional manifold</b> that is embedded within $\Re^n$
+Data lies in a <b>sub dimensional manifold</b> that is embedded within $\Re^n$, The simplest example is our planet Earth.
+For us it looks flat, but it really is a sphere. So it's sort of a 2d manifold embedded in the 3d space.
 
 <div style="padding: 10px;">
 <figure class="image">
@@ -99,7 +102,7 @@ Data lies in a <b>sub dimensional manifold</b> that is embedded within $\Re^n$
 There are several algorithm which finds sub dimensional manifold and subspaces, algorithm such as [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis), 
 [LocallyLinearEmbedding](https://cs.nyu.edu/~roweis/lle/papers/lleintro.pdf), to name a few ,these algorithm get the data from high-dimensional 
 space into a low-dimensional space so that the low-dimensional representation retains some meaningful properties of the
-original data, ideally close to its intrinsic dimension. This process is referred as Dimensionality reduction
+original data, ideally close to its intrinsic dimension. This process is referred as <b>Dimensionality reduction</b>
 
 
 
