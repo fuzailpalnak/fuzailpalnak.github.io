@@ -9,10 +9,19 @@ permalink: /curse-of-dimensionality/
 
 ---
 
-  <body>
-<script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>
-  </body>
-
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "false" } } }); </script>
+   <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+         processEscapes: true
+       }
+     });
+   </script>
+   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      
+      
 ### What is Dimensionality in Data?
 Dimensionality in statistics refers to how many <code>attributes/features</code> a data point has. For example, real state data, where 
 each house is a data point which can be represented with <code>attributes/features</code>.
