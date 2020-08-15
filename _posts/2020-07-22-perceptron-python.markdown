@@ -83,7 +83,7 @@ $$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}\\\vec{data}  = \be
 
 ### <span style="text-decoration:underline; color:gray">Decision Rule  </span> 
 
-$$\text{Decision Rule = =}w^T * x$$
+$$\text{Decision Rule: - }w^T * x$$
 
 ```python
     @staticmethod
@@ -102,7 +102,7 @@ $$\text{Decision Rule = =}w^T * x$$
 ### <span style="text-decoration:underline; color:gray">Learning Rule </span>
 
 <ul>
-$$\text{Learning Rule  = }\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
+$$\text{Learning Rule:- }\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
 </ul>
 
 ```python
