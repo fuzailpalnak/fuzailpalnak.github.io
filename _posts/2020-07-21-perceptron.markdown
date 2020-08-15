@@ -7,9 +7,11 @@ categories: machine_learning
 tags: Perceptron Machine-Learning
 permalink: /perceptron/
 
-
 ---
-
+<script type="text/javascript" async
+ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+  
 The Perceptron is the simplest type of artificial neural network. It is a model of a single neuron that can
 be used for two-class classification problems and provides the foundation for later developing much larger networks.
 
