@@ -62,7 +62,7 @@ search: true
 
 author:
   name     : "Fuzail"
-  avatar   : "/assets/images/candidate.jpg"
+  avatar   : "/assets/images/profile.jpg"
   bio      : "Software Engineer and a Machine Learning Enthusiast"
   links:
     - label: "LinkedIn"

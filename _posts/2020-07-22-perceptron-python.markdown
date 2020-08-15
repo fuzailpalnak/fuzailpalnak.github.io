@@ -7,18 +7,8 @@ tags: Perceptron Python
 permalink: /perceptron-python/
 ---
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "false" } } }); </script>
-   <script type="text/x-mathjax-config">
-     MathJax.Hub.Config({
-       tex2jax: {
-         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-         processEscapes: true
-       }
-     });
-   </script>
-   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      
+{% include mathjax.html %}
+
       
 This post will implement the perceptron classifier in python from scratch, this post will cover how to implement the 
 Classifier and do not look at the theoretical specifics, have a look at [this](https://fuzailpalnak.github.io/perceptron/) post if you are interested in
