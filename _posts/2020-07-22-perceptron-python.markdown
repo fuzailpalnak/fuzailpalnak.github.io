@@ -69,7 +69,7 @@ $$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}\\\vec{data}  = \be
         return positive, negative
 ```
 
-### <span style="color:gray text-decoration:underline;">Positive Data Points are circle and Negative Data Points are crosses </span>
+### <span style="text-decoration:underline; color:gray">Positive Data Points are circle and Negative Data Points are crosses </span>
 
 <div style="padding: 10px;">
 <figure class="image">
@@ -81,7 +81,7 @@ $$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}\\\vec{data}  = \be
         
 ## Training the Perceptron classifier, it is combination of two rules `decision rule` and the `learning rule`
 
-### <span style="color:gray text-decoration:underline;">Decision Rule  </span> 
+### <span style="text-decoration:underline; color:gray">Decision Rule  </span> 
 
 $$\text{Decision Rule = =}w^T * x$$
 
@@ -99,7 +99,7 @@ $$\text{Decision Rule = =}w^T * x$$
         return np.dot(w, x)
 ```
 
-### <span style="color:gray text-decoration:underline;">Learning Rule </span>
+### <span style="text-decoration:underline; color:gray">Learning Rule </span>
 
 <ul>
 $$\text{Learning Rule  = }\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
@@ -123,7 +123,7 @@ $$\text{Learning Rule  = }\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{
         return w
 ```
   
-### <span style="color:gray text-decoration:underline;">Training the classifier using the `Learning Rule` and `Decision Rule` </span>
+### <span style="text-decoration:underline; color:gray">Training the classifier using the `Learning Rule` and `Decision Rule` </span>
 The classifier will loop until it finds the hyperplane
 
 ```python

@@ -40,7 +40,7 @@ n^T * coordinates + intercept = 0
 $$
 </ul>
 
-### <span style="color:gray text-decoration:underline;">How to relate hyperplane? </span>
+### <span style="text-decoration:underline; color:gray">How to relate hyperplane? </span>
 
 Consider the normal vector $\vec{n}  = \begin{bmatrix}3 \\1  \end{bmatrix}$ , now the hyperplane can be define as $3x + 1y + c = 0$
 this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation is given by $y = (-3) x + (-c)$
@@ -53,7 +53,7 @@ To have a deep dive in hyperplanes and how are hyperplanes formed and defined, h
 ##  Assumptions made by the Classifier
 The assumptions the Perceptron makes is that data is `linearly separable` and the classification problem is `binary`
 
-### <span style="color:gray text-decoration:underline;">What Does linearly separable data mean </span>
+### <span style="text-decoration:underline; color:gray">What Does linearly separable data mean </span>
 
 This means that there must exists a hyperplane which separates the data points in way making all the points belonging
 positive class lie on one side of hyperplane and the data points belonging to negative class lie on the other side.
@@ -68,7 +68,7 @@ positive class lie on one side of hyperplane and the data points belonging to ne
 
 
 
-### <span style="color:gray text-decoration:underline;">Multiple Hyperplanes</span>
+### <span style="text-decoration:underline; color:gray">Multiple Hyperplanes</span>
 
 Now the assumptions is that the data is linearly separable.<br />
 <code>How many hyperplanes could exists which separates the data?
@@ -88,7 +88,7 @@ and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
 There are two core rules at the center of this Classifier.
 
-### <span style="color:gray text-decoration:underline;">Decision Rule</span>
+### <span style="text-decoration:underline; color:gray">Decision Rule</span>
 This rule checks whether the data point lies on the positive side of the hyperplane or on the negative side, it does so
 by checking the <code>dot product</code> of the $\vec{w}$ with $\vec{x}$ i.e the <code>data point</code>
 
@@ -138,7 +138,7 @@ $$
 </ul>
 
 
-### <span style="color:gray text-decoration:underline;">Learning Rule </span>
+### <span style="text-decoration:underline; color:gray">Learning Rule </span>
 
 Now there is a rule which informs the classifier about the class the data point belongs to, using this information 
 classifier can keep on updating the weight vector $w$ whenever it make a wrong prediction until a separating hyperplane is found<br />
@@ -166,7 +166,7 @@ This translates to, the classifier is trying to increase the $\Theta$ between $w
 </figure>
 </div>
  
-### <span style="color:gray text-decoration:underline;">Dealing with the bias Term </span>
+### <span style="text-decoration:underline; color:gray">Dealing with the bias Term </span>
 
 Lets deal with the <code>bias/intercept</code> which was eliminated earlier, there is a simple trick which accounts the bias
 term while keeping the same computation discussed above, the trick is to absorb the bias term in weight vector $\vec{w}$,
