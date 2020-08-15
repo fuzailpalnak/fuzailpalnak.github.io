@@ -1,11 +1,10 @@
 ---
-layout: post
+layout: single
 title:  "Perceptron Classifier in Python"
-comments: true
-description: "Implementing the Perceptron classifier from scratch in python"
-date:   2020-07-22
+subtitle: "Implementing the Perceptron classifier from scratch in python"
+categories: machine_learning
+tags: Perceptron Python
 permalink: /perceptron-python/
-author: Fuzail Palnak
 ---
 
 <script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>

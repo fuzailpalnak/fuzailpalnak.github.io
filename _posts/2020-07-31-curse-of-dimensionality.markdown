@@ -1,11 +1,12 @@
 ---
-layout: post
+
+layout: single
 title:  "Curse of Dimensionality"
-comments: true
-description: "What is curse of dimensionality? How to tackle it? How Does it affect the Data and Training Algorithm"
-date:   2020-07-31
+subtitle: "What is curse of dimensionality? How to tackle it? How Does it affect the Data and Training Algorithm"
+categories: machine_learning Data_Dimensionality
+tags: Data Dimensionality
 permalink: /curse-of-dimensionality/
-author: Fuzail Palnak
+
 ---
 
 <script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>
