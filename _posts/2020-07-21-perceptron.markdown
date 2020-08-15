@@ -32,6 +32,7 @@ this validates our definition of hyperplanes to be one dimension less than the a
 
 What are a, b? - they are the components of the vector, this vector has a special name called `normal vector`, 
 so any hyperplane can be defined using its normal vector. 
+
 <ul>
 $$
 n^T * coordinates + intercept = 0 
