@@ -17,22 +17,72 @@ title: Fuzail Palnak
 email: fuzailpalnak@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   ML Learning
+
+repository: "fuzailpalnak/fuzailpalnak.github.io"
+
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://fuzailpalnak.github.io # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  fuzailpalnak
 disqus: fuzailpalnak-github-io
+linkedin_username: fuzailpalnak
 
 # Build settings
-markdown: kramdown
-theme: minima
-gems:
+remote_theme: "mmistakes/minimal-mistakes@4.20.1"
+#minimal_mistakes_skin: "air"
+#theme: minima
+
+plugins:
   - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
+  - jekyll-include-cache
+
+disable_disk_cache: True
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      read_time: true
+      words_per_minute: 250
+      comments: true
+      share: true
+      related: true
+      show_date: true
+      author_profile: true
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light" # "github-dark"
+    issue_term: "pathname"
+
+search: true
+
+author:
+  name     : "Fuzail"
+  avatar   : "/assets/images/candidate.jpg"
+  bio      : "Software Engineer and a Machine Learning Enthusiast"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/fuzail-palnak-b4962994/"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/fuzailpalnak"
+
+paginate: 10
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - .idea/
