@@ -5,6 +5,8 @@ subtitle: "How does Perceptron learns the decision boundary needed to
 classify the data?, What is the learning Rule and Decision for Peceptron?"
 categories: machine_learning
 tags: Perceptron Machine-Learning
+permalink: /perceptron/
+
 
 ---
 
