@@ -9,7 +9,9 @@ permalink: /curse-of-dimensionality/
 
 ---
 
+  <body>
 <script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>
+  </body>
 
 ### What is Dimensionality in Data?
 Dimensionality in statistics refers to how many <code>attributes/features</code> a data point has. For example, real state data, where 
