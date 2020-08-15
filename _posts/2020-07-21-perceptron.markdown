@@ -8,6 +8,8 @@ tags: Perceptron Machine-Learning
 permalink: /perceptron/
 
 ---
+{% include toc title="Table of Contents" %}
+
 
 <script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "false" } } }); </script>
    <script type="text/x-mathjax-config">
@@ -20,7 +22,8 @@ permalink: /perceptron/
    </script>
    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      
+
+
 The Perceptron is the simplest type of artificial neural network. It is a model of a single neuron that can
 be used for two-class classification problems and provides the foundation for later developing much larger networks.
 

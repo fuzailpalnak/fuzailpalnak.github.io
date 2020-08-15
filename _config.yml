@@ -71,6 +71,14 @@ author:
     - label: "GitHub"
       icon: "fab fa-github"
       url: "https://github.com/fuzailpalnak"
+    - label: "Google Scholar"
+      icon: "fas fa-user-graduate"
+      url: "https://scholar.google.com/citations?user=xTmdJ_MAAAAJ&hl=en"
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
 
 paginate: 10
 
