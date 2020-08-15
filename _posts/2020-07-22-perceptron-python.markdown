@@ -7,9 +7,10 @@ tags: Perceptron Python
 permalink: /perceptron-python/
 ---
 
+{% include toc title="Table of Contents" %}
+
 {% include mathjax.html %}
 
-      
 This post will implement the perceptron classifier in python from scratch, this post will cover how to implement the 
 Classifier and do not look at the theoretical specifics, have a look at [this](https://fuzailpalnak.github.io/perceptron/) post if you are interested in
 understanding how the perceptron classifier works
