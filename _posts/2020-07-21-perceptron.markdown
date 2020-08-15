@@ -6,6 +6,7 @@ classify the data?, What is the learning Rule and Decision for Peceptron?"
 categories: machine_learning
 tags: Perceptron Machine-Learning
 permalink: /perceptron/
+mathjax: true
 
 ---
 
