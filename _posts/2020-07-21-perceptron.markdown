@@ -19,7 +19,7 @@ be used for two-class classification problems and provides the foundation for la
 
 *```Before we start with Perceptron, lets go through few concept that are essential in understanding the Classifier```*
 
-### What are HyperPlanes
+## <span style="color:blue;">What are HyperPlanes</span>
 	
 > As defined by [Wikipedia](https://en.wikipedia.org/wiki/Hyperplane), a hyperplane is a subspace whose dimension is one less than that of its ambient space. If a space is 
 3-dimensional then its hyperplanes are the 2-dimensional planes, while if the space is 2-dimensional,
@@ -31,7 +31,7 @@ as $ax + by + c = 0$, If the equation is simplified it results to  $y = (-a/b) x
 this validates our definition of hyperplanes to be one dimension less than the ambient space
 
 What are a, b? - they are the components of the vector, this vector has a special name called `normal vector`, 
-so any hyperplane can be defined using its normal vector. 
+so any hyperplane can be defined using its normal vector. One property of normal vector is, it is always perpendicular to hyperplane.
 
 <ul>
 $$
@@ -40,70 +40,69 @@ n^T * coordinates + intercept = 0
 $$
 </ul>
 
+### How to relate hyperplane?
 
-One property of normal vector is, it is always perpendicular to hyperplane.
-
-<ul>
-<li>
-
-<b>How to relate hyperplane?</b><br />
 Consider the normal vector $\vec{n}  = \begin{bmatrix}3 \\1  \end{bmatrix}$ , now the hyperplane can be define as $3x + 1y + c = 0$
 this is equivalent to a line with slope $-3$ and intercept $-c$, whose equation is given by $y = (-3) x + (-c)$
-
-</li>
-</ul>
-
 
 To have a deep dive in hyperplanes and how are hyperplanes formed and defined, have a look at 
 [this explanation](https://www.youtube.com/watch?v=-sNDkhE2Vsk&feature=emb_logo)
 
-### Assumptions made by the Classifier
-The assumptions the Perceptron makes is that data is `linearly separable` and the classification problem is `binary`
-<ul>
-<li>
 
-<b>What Does linearly separable data mean</b><br />
+
+##  <span style="color:blue;">Assumptions made by the Classifier</span>
+The assumptions the Perceptron makes is that data is `linearly separable` and the classification problem is `binary`
+
+### What Does linearly separable data mean
 
 This means that there must exists a hyperplane which separates the data points in way making all the points belonging
 positive class lie on one side of hyperplane and the data points belonging to negative class lie on the other side.
 
-</li>
-</ul>
-![png]({{ site.url }}/assets/perceptron_files/hyperplane.png)
 
-<ul>
-<li>
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_files/hyperplane.png" alt="Hyperplane">
+  <figcaption>Hyperplane</figcaption>
+</figure>
+</div>
 
-<b>Multiple Hyperplanes</b><br />
+
+
+### Multiple Hyperplanes
+
 Now the assumptions is that the data is linearly separable.<br />
 <code>How many hyperplanes could exists which separates the data?
 Just One? More than One?</code><br />
 The answer is more than one, in fact infinite hyperplanes could exists if data is linearly separable, 
 and perceptron finds one such hyperplane out of the many hyperplanes that exists
 
-</li>
-</ul>
-![png]({{ site.url }}/assets/perceptron_files/multiple_hyperplanes.png)
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_files/multiple_hyperplanes.png" alt="Multiple Hyperplane">
+  <figcaption>Multiple Hyperplane</figcaption>
+</figure>
+</div>
 
 
+##  <span style="color:blue;">Perceptron Classifier</span>
 
-### Perceptron Classifier
+There are two core rules at the center of this Classifier.
 
-There are two core rules at the center of this Classifier
-<ul>
-<li>
-
-<b>Decision Rule</b><br />
+### Decision Rule
 This rule checks whether the data point lies on the positive side of the hyperplane or on the negative side, it does so
 by checking the <code>dot product</code> of the $\vec{w}$ with $\vec{x}$ i.e the <code>data point</code>
-<img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
+
 
 For simplicity the <code>bias/intercept</code> term is removed from the equation $w^T * x + b = 0$, without the <code>bias/intercept</code> term,
 the hyperplane, that $w$ defines would always have to go through the origin, i.e. $w^T * x = 0$<br />
 This is done so the focus is just on the working of the classifier and not have to worry about the bias term during computation
 
-<ul>
-<li>
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_files/classifier.png" alt="Classifier">
+  <figcaption>Classifier/Decision Rule</figcaption>
+</figure>
+</div>
 
 <b>How does the dot product tells whether the data point lies on the positive side of the hyper plane or negative side of hyperplane?</b><br />
 
@@ -115,7 +114,14 @@ $$
 $$
 \Theta  \propto   \text{arcos }  w^{T} * x
 $$
-<img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Example 2">
+
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_files/example2.png" alt="Data Points">
+  <figcaption>Data Points</figcaption>
+</figure>
+</div>
+
 
 For all the positive points, $cos \theta$ is positive as $\Theta$ is $< 90$, and for all the negative points,
 $cos \theta$ is negative as $\Theta$ is $> 90$
@@ -128,20 +134,14 @@ $$
 prediction =\begin{cases}1 & w^T* x \geq 0\\-1 & w^T* x <  0\end{cases} 
 $$
 
-</li>
-</ul>
-</li>
 
-
-
-<li>
-
-<b>Learning Rule</b><br />
+### Learning Rule
 
 Now there is a rule which informs the classifier about the class the data point belongs to, using this information 
 classifier can keep on updating the weight vector $w$ whenever it make a wrong prediction until a separating hyperplane is found<br />
 if $y * w^T * x <= 0$ i.e the point has been misclassified hence classifier will update the vector $w$ with the update rule
-$\vec{w}  = \vec{w}  + y * \vec{x}$<br />   
+$\vec{w}  = \vec{w}  + y * \vec{x}$<br />  
+
 
 <b>Rule when positive class is miss classified</b><br />
 
@@ -154,14 +154,16 @@ This translates to, the classifier is trying to decrease the $\Theta$ between $w
 $$\text{if } y = -1 \text{ then } \vec{w}  = \vec{w} - \vec{x}$$
 This translates to, the classifier is trying to increase the $\Theta$ between $w$ and the $x$<br />
 
-
 <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Intution">
 
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_files/intution.png" alt="Learning Rule">
+  <figcaption>Learning Rule</figcaption>
+</figure>
+</div>
  
-</li>
-<li>
-
-<b>Dealing with the bias Term</b><br />
+### Dealing with the bias Term
 
 Lets deal with the <code>bias/intercept</code> which was eliminated earlier, there is a simple trick which accounts the bias
 term while keeping the same computation discussed above, the trick is to absorb the bias term in weight vector $\vec{w}$,
@@ -170,9 +172,9 @@ $$\vec{w_{adjusted}}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix} \vec{x_
 
 $$w_{adjusted}^T * x_{adjusted} = 0\\w_{1}  x_{1} + w_{2}  x_{2} +b = 0$$
 which is nothing but $w^{T} * x + b =0$, therefore $w_{adjusted}^{T} * x_{adjusted} = w^{T} * x + b$
-</li>
-</ul>
 
+
+##  <span style="color:blue;">Pseudo Code</span>
 Combining the `Decision Rule` and `Learning Rule`, the perceptron classifier is derived
 ```python
 while True:
