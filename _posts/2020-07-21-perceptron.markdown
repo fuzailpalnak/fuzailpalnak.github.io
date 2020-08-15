@@ -1,12 +1,11 @@
 ---
-layout: post
+layout: single
 title:  "Understanding The Perceptron Classifier"
-comments: true
-description: "How does Perceptron learns the decision boundary needed to 
+subtitle: "How does Perceptron learns the decision boundary needed to 
 classify the data?, What is the learning Rule and Decision for Peceptron?"
-date:   2020-07-21
-permalink: /perceptron/
-author: Fuzail Palnak
+categories: machine_learning
+tags: Perceptron Machine-Learning
+
 ---
 
 The Perceptron is the simplest type of artificial neural network. It is a model of a single neuron that can
