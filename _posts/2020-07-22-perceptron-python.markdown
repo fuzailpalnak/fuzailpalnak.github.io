@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Perceptron Classifier in Python"
-subtitle: "Implementing the Perceptron classifier from scratch in python"
+excerpt: "Implementing the Perceptron classifier from scratch in python"
 categories: machine_learning
 tags: Perceptron Python
 permalink: /perceptron-python/

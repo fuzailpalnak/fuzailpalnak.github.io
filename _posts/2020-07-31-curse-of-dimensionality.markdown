@@ -1,7 +1,7 @@
 ---
 layout: single
 title:  "Curse of Dimensionality"
-subtitle: "What is curse of dimensionality? How to tackle it? How Does it affect the Data and Training Algorithm"
+excerpt: "What is curse of dimensionality? How to tackle it? How Does it affect the Data and Training Algorithm"
 categories: machine_learning Data_Dimensionality
 tags: Data Dimensionality
 permalink: /curse-of-dimensionality/
