@@ -9,18 +9,8 @@ permalink: /perceptron/
 
 ---
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "false" } } }); </script>
-   <script type="text/x-mathjax-config">
-     MathJax.Hub.Config({
-       tex2jax: {
-         inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-         processEscapes: true
-       }
-     });
-   </script>
-   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      
+<script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>
+
 The Perceptron is the simplest type of artificial neural network. It is a model of a single neuron that can
 be used for two-class classification problems and provides the foundation for later developing much larger networks.
 

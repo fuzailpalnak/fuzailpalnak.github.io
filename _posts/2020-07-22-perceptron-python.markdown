@@ -8,6 +8,8 @@ permalink: /perceptron-python/
 author: Fuzail Palnak
 ---
 
+<script src="https://gist.github.com/fuzailpalnak/17356404f311b78cb6a8f7aed05f4716.js"></script>
+
 This post will implement the perceptron classifier in python from scratch, this post will cover how to implement the 
 Classifier and do not look at the theoretical specifics, have a look at [this](https://fuzailpalnak.github.io/perceptron/) post if you are interested in
 understanding how the perceptron classifier works
