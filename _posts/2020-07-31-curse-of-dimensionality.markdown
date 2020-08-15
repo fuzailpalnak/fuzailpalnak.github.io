@@ -17,15 +17,18 @@ permalink: /curse-of-dimensionality/
 ## What is Dimensionality in Data?
 Dimensionality in statistics refers to how many <code>attributes/features</code> a data point has. For example, real state data, where 
 each house is a data point which can be represented with <code>attributes/features</code>.
+<ul>
 $$ 
 house =  \begin{bmatrix}\text{num of bedrooms} \\\text{num of rooms} \\\text{has a garage} \\\text{...}  \end{bmatrix} 
 $$
+</ul>
+
 
 
 ## What happens when dimensionality in data is increased?
 > "As the number of features or dimensions grows, the amount of data we need to generalize accurately grows exponentially." <br /> - Charles Isbell, Professor and Senior Associate Dean, School of Interactive Computing, Georgia Tech
 
-### Ambient/Empty Space
+### <span style="color:gray;">Ambient/Empty Space  </span>
 
 Consider 5 data points with just one feature, the feature space needed to represent the data is just $5^1$,
 Now, when an additional feature is introduced without 
@@ -54,7 +57,7 @@ the volume of feature space grows so quickly that the data cannot keep up and th
 machine learning algorithm to perform well, if data points are not in proportion with the features then the model might experience poor performance during testing</mark>
 
 
-### Euclidean Distance in High Dimensional Space
+### <span style="color:gray;">Euclidean Distance in High Dimensional Space </span>
 The distance between data points in $n$ dimensional space is given as $$\text{distance = }\sqrt{ \triangle x^2 +  \triangle y^2 +  \cdots + \triangle n^2} $$The addition of new feature
  will always add a positive value to the overall distance, the distance between two data points increases drastically with their dimensionality.
 i.e the data points move further apart as a new feature is added, So in high dimensional space euclidean distance is not an accurate distance metric to consider.
@@ -67,7 +70,7 @@ However, not always such a huge feature space is required to represent the under
 this representation is known as <code>intrinsic dimensionality</code> of data. 
 Intrinsic dimension for a data set can be thought of as the number of features needed in a minimal representation of the data. 
 
-### Sub Spaces
+### <span style="color:gray;">Sub Spaces</span>
 
 The space could be high dimensional but the data might lie in a <b>sub space</b>, a $\Re^d$ dimensional data embedded in $\Re^n$  dimensional space 
 
@@ -78,7 +81,7 @@ The space could be high dimensional but the data might lie in a <b>sub space</b>
 </figure>
 </div>
 
-### Manifolds
+### <span style="color:gray;">Manifolds </span>
 
 Data lies in a <b>sub dimensional manifold</b> that is embedded within $\Re^n$, The simplest example is our planet Earth.
 For us it looks flat, but it really is a sphere. So it's sort of a 2d manifold embedded in the 3d space.

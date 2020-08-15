@@ -15,12 +15,12 @@ This post will implement the perceptron classifier in python from scratch, this 
 Classifier and do not look at the theoretical specifics, have a look at [this](https://fuzailpalnak.github.io/perceptron/) post if you are interested in
 understanding how the perceptron classifier works
 
-- Necessary imports 
+## Necessary imports 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 ```
-- Defining Variables
+## Defining Variables
 ```python
 class Perceptron:
     def __init__(self):
@@ -32,10 +32,13 @@ class Perceptron:
         self.populate_data() # A gui interface to get data from user
 ```
 
-- Get Positive and Negative Data Points, This block of code will load a Interactive GUI which will wait for user to 
-provide input, The bias term b is absolved by the data making the data one dimensional higher than the user provided input, making
-$$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}$$ 
-$$\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$$
+## Get Positive and Negative Data Points
+
+This block of code will load a Interactive GUI which will wait for user to provide input, The bias term b is absolved by the data making the data one dimensional higher than the user provided input, making
+<ul>
+$$\vec{w}  = \begin{bmatrix}w_{1}  \\w_{2} \\b  \end{bmatrix}\\\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$$
+</ul>
+
 ```python
 
     def populate_data(self):
@@ -65,34 +68,43 @@ $$\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$$
         plt.show()
         return positive, negative
 ```
-- Positive Data Points Input
-![png]({{ site.url }}/assets/perceptron_python/positive.png)
 
-- Negative Data Points Input
-![png]({{ site.url }}/assets/perceptron_python/negative.png)
+### <span style="color:gray;">Positive Data Points are circle and Negative Data Points are crosses </span>
 
-- Positive Data Points are circle and Negative Data Points are crosses
-![png]({{ site.url }}/assets/perceptron_python/pos_neg.png)
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_python/pos_neg.png" alt="Classes">
+  <figcaption>Classes</figcaption>
+</figure>
+</div>
 
         
-- Training the Perceptron classifier, it is combination of two rules `decision rule` and the `learning rule`
+## Training the Perceptron classifier, it is combination of two rules `decision rule` and the `learning rule`
 
-    - *Decision Rule :-* $w^T * x$ 
-    ```python
-        @staticmethod
-        def __decision_rule(w, x):
-            """
-            data points above the hyperplane will be positive as the theta will be [0, 90] with respect to self.w
-            and points below the hyperplane will be negative
-            
-            :param w:
-            :param x:
-            :return:
-            """
-            return np.dot(w, x)
-    ```
+### <span style="color:gray;">Decision Rule  </span> 
 
-    - *Learning Rule* $$\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
+$$\text{Decision Rule = =}w^T * x$$
+
+```python
+    @staticmethod
+    def __decision_rule(w, x):
+        """
+        data points above the hyperplane will be positive as the theta will be [0, 90] with respect to self.w
+        and points below the hyperplane will be negative
+        
+        :param w:
+        :param x:
+        :return:
+        """
+        return np.dot(w, x)
+```
+
+### <span style="color:gray;">Learning Rule </span>
+
+<ul>
+$$\text{Learning Rule  = }\vec{w} =\begin{cases}\vec{w} & y * w^T * x > 0\\\vec{w} = \vec{w} + y * \vec{x} & y * w^T * x <= 0\end{cases}$$  
+</ul>
+
 ```python
     @staticmethod
     def __update(w, x, y):
@@ -111,8 +123,9 @@ $$\vec{data}  = \begin{bmatrix}xcoordinate \\ycoordinate \\1  \end{bmatrix}$$
         return w
 ```
   
-- Train the classifier using the `Learning Rule` and `Decision Rule`, the classifier will loop until it finds the
-hyperplane
+### <span style="color:gray;">Training the classifier using the `Learning Rule` and `Decision Rule` </span>
+The classifier will loop until it finds the hyperplane
+
 ```python
     def train(self):
         step = 0
@@ -140,17 +153,19 @@ hyperplane
                 break
 ```
 
-- Run
+## Run
 ```python
 p = Perceptron()
 p.train()
 p.plt_decision_boundary()
 ```
-![png]({{ site.url }}/assets/perceptron_python/decision.png)
 
-Visit the code on [Github]("https://github.com/fuzailpalnak/ML-Scratch/blob/master/perceptron/perceptron.py)
-
-
+<div style="padding: 10px;">
+<figure class="image">
+  <img src="https://fuzailpalnak.github.io/assets/perceptron_python/decision.png" alt="Decision">
+  <figcaption>Decision</figcaption>
+</figure>
+</div>
 
 
 
