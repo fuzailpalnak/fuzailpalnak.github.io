@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Fuzail Palnak
+title: Fuzail Blog
 email: fuzailpalnak@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   ML Learning
@@ -28,8 +28,6 @@ linkedin_username: fuzailpalnak
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.20.1"
-#minimal_mistakes_skin: "air"
-#theme: minima
 
 plugins:
   - jekyll-feed
@@ -74,6 +72,21 @@ author:
     - label: "Google Scholar"
       icon: "fas fa-user-graduate"
       url: "https://scholar.google.com/citations?user=xTmdJ_MAAAAJ&hl=en"
+
+# Analytics
+analytics:
+  provider               : "google-universal"
+  google:
+    tracking_id          : "UA-158202605-1"
+    anonymize_ip         : true
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/fuzailpalnak"
+
 
 jekyll-archives:
   enabled:
