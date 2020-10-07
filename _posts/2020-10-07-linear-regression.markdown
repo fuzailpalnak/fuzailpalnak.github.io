@@ -74,7 +74,7 @@ Input Data with Outlier            |  Output
 
 ### <span style="text-decoration:underline; color:gray">Absolute Loss </span>
 
-Absolute loss is defined as $| w^Tx   - y | $
+Absolute loss is defined as abs($w^Tx - y$)
 
 - The problem of squared loss focusing on outlier is solved by absolute loss, as the loss function treats all point 
 equally, the update rule is same no matter how much away the prediction is from true label
