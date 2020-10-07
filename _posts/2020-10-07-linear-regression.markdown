@@ -74,7 +74,7 @@ Input Data with Outlier            |  Output
 
 ### <span style="text-decoration:underline; color:gray">Absolute Loss </span>
 
-Absolute loss is defined as $| (w^T* x) - y |$
+Absolute loss is defined as $| w^Tx   - y | $
 
 - The problem of squared loss focusing on outlier is solved by absolute loss, as the loss function treats all point 
 equally, the update rule is same no matter how much away the prediction is from true label
@@ -88,7 +88,8 @@ Input Data with Outlier            |  Output
 
 ### <span style="text-decoration:underline; color:gray">Huber Loss </span>
 
-Huber loss is defined as $$\\begin{cases}squared loss & (|w^T* x|) - y  < delta\\\\absolute loss &otherwise\\end{cases}$$
+Huber loss is defined as 
+$$loss =\begin{cases}\text{squared loss} & ( | w^Tx |  - y) < \text{delta}\\\text{absolute loss} & \text{otherwise}\end{cases} $$
 
 - The properties of both *squared loss* and *absolute loss* are incorporated by *huber loss*, Its a switch loss,
 as it switches from *absolute loss* to *squared loss* after a certain specified threshold $delta$
