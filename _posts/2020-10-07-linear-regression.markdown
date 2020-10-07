@@ -34,11 +34,13 @@ Assumption made on the *data* is, it is drawn from a line $w^{T} x + b$ and for 
 is drawn from a Gaussian with mean $w^{T} x_{i} + b$ with variance $\sigma^2$ and the task of linear regression is
 to estimate $w$ for the data.
 
-To formulate it mathematically, for every data point
+To formulate it mathematically,
 $$y_{i} = w^{T} x_{i} + b +  \epsilon_{i} \\ \text{where } \epsilon_{i}  \sim N(0, \sigma^2)$$
+
+therefore,
 $$ y_i|\mathbf{x}_i \sim N(\mathbf{w}^\top\mathbf{x}_i, \sigma^2) \Rightarrow P(y_i|\mathbf{x}_i,\mathbf{w})=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(\mathbf{x}_i^\top\mathbf{w}-y_i)^2}{2\sigma^2}}$$
 
-Label $x_{i}$ for every data point is drawn from a Gaussian with mean $w^{T} x_{i}$ and variance $\sigma^2$
+Label $y_{i}$ for every data point is drawn from a Gaussian with mean $w^{T} x_{i}$ and variance $\sigma^2$
 
 <div style="padding: 10px;">
 <figure class="image">
@@ -72,7 +74,7 @@ Input Data with Outlier            |  Output
 
 ### <span style="text-decoration:underline; color:gray">Absolute Loss </span>
 
-Absolute loss is defined as $|(w^{T} x - y)|$
+Absolute loss is defined as $| (w^T* x) - y |$
 
 - The problem of squared loss focusing on outlier is solved by absolute loss, as the loss function treats all point 
 equally, the update rule is same no matter how much away the prediction is from true label
@@ -86,7 +88,7 @@ Input Data with Outlier            |  Output
 
 ### <span style="text-decoration:underline; color:gray">Huber Loss </span>
 
-Huber loss is defined as $\\begin{cases}squared loss & (|w^T* x|) - y  < delta\\\\absolute loss &otherwise\\end{cases}$
+Huber loss is defined as $$\\begin{cases}squared loss & (|w^T* x|) - y  < delta\\\\absolute loss &otherwise\\end{cases}$$
 
 - The properties of both *squared loss* and *absolute loss* are incorporated by *huber loss*, Its a switch loss,
 as it switches from *absolute loss* to *squared loss* after a certain specified threshold $delta$
